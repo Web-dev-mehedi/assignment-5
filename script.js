@@ -19,6 +19,15 @@ function setOutputValueById(id){
 
 }
 
+//function for css class add_remove in toggle tab
+function tabToggleToCssAdd(id){
+    document.getElementById(id).classList.add('hidden');
+}
+
+function tabToggleToCssRemove(id){
+    document.getElementById(id).classList.remove('hidden');
+}
+
 
 
 
