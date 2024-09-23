@@ -70,7 +70,7 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
         return ;
      }
    
-   //
+   //for history
     const historyDiv = document.getElementById('historysec')
     const div= document.createElement('div');
     div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
@@ -81,15 +81,24 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
     `
     historyDiv.appendChild(div);
 
-    tabToggleToCssAdd('hiddnp')
+
+    // history page to hidden
+    tabToggleToCssAdd('hiddenp');
+
+    //modal open
+    tabToggleToCssRemove('my_modal')
+   
     
 
-
-
-
-
-
 })
+
+// modal closed
+document.getElementById('toClosed').addEventListener('click', function(){
+    tabToggleToCssAdd('my_modal');
+})
+
+
+
 
 // window chinging function
 function windowChangeBlog(){
