@@ -64,7 +64,7 @@
                           <!-- inputForDonate -->
                         <input id="input1" type="text" placeholder="Write Donation Amount" class="input input-bordered block w-full mb-4" required />
                       <!-- Dynamic ClickAble Button -->
-                  <button id="donateBtn1" class="btn bg-[#b4f461] w-full text-xl font-medium">Donate Now</button>
+                   <button id="donateBtn1" class="btn bg-[#b4f461] w-full text-xl font-medium">Donate Now</button>
                 </div>
               </div>
           </div>
@@ -115,7 +115,7 @@
                         <div class="flex justify-start items-center gap-3 bg-[#1111110D] px-4 py-3 rounded-lg w-48 mb-4">
                           <img src="./assets/coin.png" alt="">
                             <!-- dynamicBalaced -->
-                            <span class="text-xl text-[#111111B3] font-medium">5000</span>
+                            <span id ="outPutValue2" class="text-xl text-[#111111B3] font-medium">5000</span>
                           <span class="text-xl text-[#111111B3] font-medium">BDT</span>
                       </div>
                       <h1 c lass="text-xl font-bold ">Aid for Injured in the Quota Movement</h1>
@@ -123,7 +123,7 @@
                           The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                             </p>
                             <!-- inputForDonate -->
-                          <input type="text" placeholder="Write Donation Amount" class="input input-bordered block w-full mb-4" required />
+                          <input id="input3" type="text" placeholder="Write Donation Amount" class="input input-bordered block w-full mb-4" required />
                       <!-- Dynamic ClickAble Button -->
                     <button id="donateBtn3" class="btn bg-[#b4f461] w-full text-xl font-medium">Donate Now</button>
                   </div>
@@ -132,25 +132,26 @@
       </section> 
 
       <!-- modal -->
-        <div id="my_modal" class="hidden fixed top-1/2 left-1/2  -translate-y-1/2 -translate-x-1/2">
-           <div class="bg-white shadow-2xl text-center px-20 py-8 w-full space-y-4 rounded-xl">
-              <h1 class="text-4xl text-black font-bold capitalize">congrates</h1>
-                <img class="m-auto" src="./assets/coin.png" alt="">
-                   <h3 class="text-xl font-bold capitalize  text-slate-500">You have donated for Humankind</h3>
-                     <p class="py-4 text-xl font-bold capitalize  text-black">Successfully</p>
-                  <form id="toClosed">
-                <button class="btn btn-ghost bg-slate-200 text-lg text-slate-800 capitalize">close confirmation</button>
-             </form>
-          </div>
-        </div>
+        <section>
+          <div id="my_modal" class="hidden fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11/12 sm:w-[550px]">
+            <div class="bg-white shadow-2xl text-center px-3 py-8 space-y-4 rounded-xl">
+               <h1 class="text-4xl text-black font-bold capitalize">congrates</h1>
+                 <img class="m-auto" src="./assets/coin.png" alt="">
+                    <h3 class="text-xl font-bold capitalize  text-slate-500">You have donated for Humankind</h3>
+                      <p class="py-4 text-xl font-bold capitalize  text-black">Successfully</p>
+                   <form id="toClosed">
+                 <button class="btn btn-ghost bg-slate-200 text-lg text-slate-800 capitalize">close confirmation</button>
+              </form>
+           </div>
+         </div>
+        </section>
     </main>
     
 
    <!-- histry page -->
-     <section id="historysec" class="px-4 md:px-14 xl:px-36 pt-12 pb-2 bg-red-50 hidden min-h-screen">
-        <p id="hiddenp" class="text-xl text-[#111] font-semibold text-center mt-28">history is empty</p>
-          
-     </section>
+    <section id="historysec" class="px-4 md:px-14 xl:px-36 pt-12 pb-2 bg-red-50 hidden min-h-screen">
+       <p id="hiddenp" class="text-xl text-[#111] font-semibold text-center mt-28">history is empty</p>
+    </section>
 
 
        <script src="utilities.js"></script>

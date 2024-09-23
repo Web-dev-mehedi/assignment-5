@@ -114,3 +114,13 @@ function tabToggleBtnStyleSwitch2(id){
     document.getElementById(id).classList.remove('bg-[#b4f461]');
     document.getElementById(id).classList.add('text-[#111111B3]','border' ,'border-[#F1F1F1]');
 }
+
+// function for clear output input on closing modal
+function clearInOnClosingModel(id){
+   document.getElementById(id).value ="";
+
+}
+function clearOutOnClosingModel(id){
+    document.getElementById(id).innerText ="0";
+ 
+ }
