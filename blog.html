@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- header-section -->
-     <header class="">  
+     <header class="sticky top-0 z-20 ">  
        <div class="bg-[#F9F7F3] px-4 md:px-14 xl:px-36 py-7 ">
          <!-- navVar -->
            <nav class="flex justify-between container m-auto">
@@ -36,70 +36,133 @@
 
         <section class="bg-slate-400 pb-28 pt-20">
            <div class="container mx-auto flex flex-col justify-center items-center gap-5 px-7 lg:px-24">
-               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border ">
+            <!-- ques-1 -->
+               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
                  <div class="collapse-title text-xl font-medium text-slate-900"> What is the Document Object Model (DOM)?</div>
-                    <div class="collapse-content">
-                       <p class="">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each node is an object representing a part of the document. This allows programming languages like JavaScript to interact with and manipulate the document’s structure, style, and content1</p>
+                    <div class="collapse-content ">
+                       <p class=" bg-emerald-50 p-4 rounded-xl text-slate-500">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each node is an object representing a part of the document. This allows programming languages like JavaScript to interact with and manipulate the document’s structure, style, and content12. Essentially, the DOM provides a way for scripts to dynamically access and update the content, structure, and style of a document.</p>
                    </div>
                </div>
-               <!--  -->
+               <!-- ques-2 -->
                <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
                 <div class="collapse-title text-xl font-medium text-slate-900">How do you select an element from the DOM?</div>
-                   <div class="collapse-content">
-                     <p class="pb-2">You can select elements from the DOM using various methods provided by the document object. Here are some common   ways:</p>
-                      <li class="pb-8">By ID : <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
-                        document.getElementById('myElementId')
-                     </code></li>
+                   <div class="collapse-content overflow-auto">
+                     <p class="pb-2 text-slate-500">You can select elements from the DOM using various methods provided by the document object. Here are some common   ways:</p>
+                      <div class="bg-emerald-50 w-full m-auto text-red-400 p-4 rounded-xl overflow-auto">
+                        <strong class="block text-slate-700">getElementById:</strong> Selects an element by its unique ID.
+                
+                        const element = document.getElementById('myId');
+                       
+                       <strong class="block text-slate-700"> getElementsByClassName:</strong> Selects all elements with a specific class name.
+                        JavaScript
+                        
+                        const elements = document.getElementsByClassName('myClass');
+                        AI-generated code. Review and use carefully. More info on FAQ.
+                        getElementsByTagName: Selects all elements with a specific tag name.
 
-                     <li class="pb-8">By Class Name: <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
-                        document.querySelector('.myClassName'); or document.querySelectorAll('.myClassName')
-                     </code></li>
-
-                     <li class="pb-8">By Tag Name: <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
-                        var element = document.getElementById('myElementId');
-                     </code></li>
-
-                     <li class="pb-8">By CSS Selector: <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
-                        var element = document.getElementById('myElementId');
-                     </code></li>
+                        const elements = document.getElementsByTagName('div');
+                        
+                        <strong class="block text-slate-700">querySelector:</strong> Selects the first element that matches a CSS selector.
+                        
+                        const element = document.querySelector('.myClass');
+                        
+                        <strong class="block text-slate-700">querySelectorAll:</strong> Selects all elements that match a CSS selector.
                       
+                        
+                        const elements = document.querySelectorAll('.myClass');
+                      </div>
                  </div>
               </div>
-              <!--  -->
-              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border">
+              <!-- ques-3 -->
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
                 <div class="collapse-title text-xl font-medium text-slate-900">What is event delegation in the context of the DOM, and why is it  useful?</div>
-                   <div class="collapse-content">
-                     <p class="pb-6">tabindex="0" attribute is necessary to make the div focusable</p>
+                   <div class="collapse-content overflow-scroll">
+                     <p class="pb-2  text-slate-500">Event delegation is a technique in which a single event listener is added to a parent element to manage events for multiple child elements. This is based on the concept of event bubbling, where an event propagates up the DOM tree from the target element to its ancestors34.
+
+                        For example, instead of adding a click event listener to each button inside a container, you can add a single event listener to the container:</p>
+                     <div class="bg-emerald-50 w-full m-auto text-red-400 p-4 rounded-xl overflow-x-scroll">
+                        const container = document.getElementById('container');
+                        container.addEventListener('click', (event) => {
+                          if (event.target.tagName === 'BUTTON') {
+                            console.log('Button clicked:', event.target.textContent);
+                          }
+                        });
+                     </div>
                  </div>
               </div>
-              <!--  -->
-              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border">
+              <!--ques-4  -->
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
                 <div class="collapse-title text-xl font-medium text-slate-900">How do you manipulate an element's attributes and styles using the DOM?</div>
-                  <div class="collapse-content">
-                    <p class="pb-6"> You can manipulate an element’s attributes and styles using various properties and methods:</p>
-                       <li class="pb-6">Attributes: </li>
-                         <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
-                            var element = document.getElementById('myElementId');
-                            element.setAttribute('data-custom', 'value'); // Set attribute
-                            var value = element.getAttribute('data-custom'); // Get attribute
-                            element.removeAttribute('data-custom'); // Remove attribute                            
-                     </code>
+                  <div class="collapse-content overflow-x-scroll">
+                    <p class="py-2 px-4  text-slate-500"> You can manipulate an element’s attributes and styles using various properties and methods:</p>
+                     <div class="bg-emerald-50 w-full m-auto text-red-400 p-4 rounded-xl overflow-x-scroll">
+                       <strong class="block text-slate-700"> Changing attributes:</strong>
+                        const element = document.getElementById('myElement');
+                        element.setAttribute('src', 'newImage.jpg'); // Set a new attribute
+                        const src = element.getAttribute('src'); // Get an attribute value
+                        element.removeAttribute('src'); // Remove an attribute  
+                        <strong class="block text-slate-700">Changing styles:</strong>
+                        const element = document.getElementById('myElement');
+                        element.setAttribute('src', 'newImage.jpg'); // Set a new attribute
+                        const src = element.getAttribute('src'); // Get an attribute value
+                        element.removeAttribute('src'); // Remove an attribute  
+                        <strong class="block text-slate-700"> Manipulating classes:</strong>
+                        const element = document.getElementById('myElement');
+                        element.setAttribute('src', 'newImage.jpg'); // Set a new attribute
+                        const src = element.getAttribute('src'); // Get an attribute value
+                        element.removeAttribute('src'); // Remove an attribute     
+                     </div>
                  </div>
               </div>
-              <!--  -->
-              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border">
+              <!-- ques-5  -->
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
                 <div class="collapse-title text-xl font-medium text-slate-900">How do you remove an element from the DOM?</div>
-                   <div class="collapse-content">
-                     <p class="pb-6"> You can use the removeChild method to remove an element from the DOM. For example:</p>
-                       <li class="pb-6">By ID : </li>
-                         <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
-                         var element = document.getElementById('myElementId');
-                    </code>
+                   <div class="collapse-content overflow-auto">
+                     <p class="pb-2  text-slate-500"> You can use the removeChild method to remove an element from the DOM. For example:</p>
+                       <div class="text-slate-500 overflow-auto bg-emerald-50 p-4 rounded-xl overflow-x-scroll w-full m-auto">
+                       <strong class="block text-slate-700" > 1. Using remove() Method</strong>
+                        The remove() method is the simplest way to remove an element from the DOM. You just call this method on the element you want to remove:
+                        const element = document.getElementById('myElement');
+                        element.remove();
+                        <strong class="block text-slate-700"> 2. Using removeChild() Method</strong>
+                        If you need to remove an element and you have a reference to its parent, you can use the removeChild() method:
+                        const parent = document.getElementById('parentElement');
+                        const child = document.getElementById('childElement');
+                        parent.removeChild(child);
+                        <strong class="block text-slate-700"> 3. Using innerHTML</strong>
+                        Another way to remove an element is by setting the innerHTML of its parent to an empty string, but this is less efficient and not recommended for large or complex DOM structures:
+                        const parent = document.getElementById('parentElement');
+                        parent.innerHTML = '';
+                        Example
+                        Here’s a practical example using the remove() method:
+                        HTML
+                      <pre><code class="text-red-500">
+                       &lt;!DOCTYPE html&gt;
+                       &lt;html&gt;
+                       &lt;head&gt;
+                       &lt;title&gt;Remove Element Example&lt;/title&gt;
+                       &lt;/head&gt;
+                        &lt;body&gt;
+                          &lt;div id="container"&gt;
+                               &lt;p id="paragraph"&gt;This is a paragraph.&lt;/p&gt;
+                             &lt;button onclick="removeParagraph()"&gt;Remove Paragraph&lt;/button&gt;
+                         &lt;/div&gt;
+
+                          &lt;script&gt;
+                           function removeParagraph() {
+                             const paragraph = document.getElementById('paragraph');
+                           paragraph.remove();
+                         }
+                        &lt;/script&gt;
+                      &lt;/body&gt;
+                    &lt;/html&gt;
+                    </code></pre>
+                   </div>
                  </div>
               </div>
            </div>
         </section>
-        
+
      <script src="utilities.js"></script>
     <script src="script.js"></script>
 </body>

@@ -1,4 +1,13 @@
  
+
+ // Define the event handler function
+// function handleScroll(event) {
+//   document.getElementById('navbar')
+// }
+
+// // Attach the scroll event handler to the window
+// window.addEventListener('scroll', handleScroll);
+
 //donateAllButtonCall calling function
 // function donateAllButtonCall(id){
 //     //donate button call
@@ -70,12 +79,13 @@
 
 
 //total tageted value
-let targetValue = 4000;
-const needBalaced = document.getElementById('target').innerText = targetValue;
+let targetValue = 40000;
+ document.getElementById('target').innerText = targetValue;
 
 // get Input function
 function getInputValueById(id){
-    return parseFloat(document.getElementById(id).value)
+    // return parseFloat(document.getElementById(id).value)
+    return Number(document.getElementById(id).value)
 }
 
 // setOutput fuction

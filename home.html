@@ -12,14 +12,14 @@
 <!-- sticky top-2 z-20 -->
    <body class="bg-[#F9F7F3]">
    <!-- header-section -->
-    <header class="">  
+    <header id="navbar" class="sticky top-0 -bottom-10 z-20">  
       <div class="bg-[#F9F7F3] px-4 md:px-14 xl:px-36 py-7 ">
         <!-- navVar -->
-        <nav class="flex justify-between container m-auto">
+        <nav class="flex flex-row-reverse flex-wrap sm:flex-row justify-between container m-auto relative">
           <!-- blogPage Button -->
-            <button onclick="windowChangeBlog()" class="btn w-24 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111]">Blog</button>
+            <button onclick="windowChangeBlog()" class="absolute left-0 -bottom-2 btn w-24 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111]">Blog</button>
             <!-- logo -->
-              <div class="flex justify-center w-1/2 m-auto items-center gap-3">
+              <div class="flex justify-center w-full sm:w-1/2 sm:mx-auto items-center gap-3 pb-5 sm:pb-0">
                 <img src="./assets/logo.png" alt="">
                   <span class="text-xl font-semibold text-[#111111]">Donate Bangladesh</span>
                 </div>
@@ -30,13 +30,13 @@
                   <span id="target" class="text-xl text-[#111111B3] font-medium">5000</span>
                 <span class="text-xl text-[#111111B3] font-medium">BDT</span>
             </div>
-          </nav>
-        </div>
-        <!-- toggle-Button -->
-        <div class="flex gap-4 justify-center items-center bg-white px-4 md:px-14 xl:px-36 py-10 ">
+          </nav>   
+        </div> 
+         <!-- toggle-Button -->
+         <div class="flex gap-4 justify-center items-center bg-white px-4 md:px-14 xl:px-36 py-10 ">
           <button id="donation" class="px-8 py-4 bg-[#b4f461] text-[#111111] rounded-lg text-xl font-semibold" type="button">Donation</button>
             <button id="history" class="px-8 py-4  border border-[#F1F1F1] rounded-lg text-xl text-[#111111B3] font-semibold" type="button">History</button>
-        </div>  
+        </div>
       </header>
 
    <main id="mainPage" class="pb-24">
@@ -133,7 +133,7 @@
 
       <!-- modal -->
         <section>
-          <div id="my_modal" class="hidden fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11/12 sm:w-[550px]">
+          <div id="my_modal" class="hidden fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11/12 sm:w-[550px] z-40">
             <div class="bg-white shadow-2xl text-center px-3 py-8 space-y-4 rounded-xl">
                <h1 class="text-4xl text-black font-bold capitalize">congrates</h1>
                  <img class="m-auto" src="./assets/coin.png" alt="">
@@ -150,7 +150,7 @@
 
    <!-- histry page -->
     <section id="historysec" class="px-4 md:px-14 xl:px-36 pt-12 pb-2 bg-red-50 hidden min-h-screen">
-       <p id="hiddenp" class="text-xl text-[#111] font-semibold text-center mt-28">history is empty</p>
+       <p id="hiddenp" class="text-xl text-[#11111160] font-semibold text-center mt-28">history is empty</p>
     </section>
 
 

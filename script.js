@@ -25,19 +25,17 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
     const inputValue= getInputValueById('input1');
     //validater  
     if(isNaN(inputValue) || inputValue <= 0 || inputValue > targetValue){
-    alert('Write a valid Number');
+    alert('Write a valid Amount');
     return ;
     }
     else{
     const outPutValue = parseFloat(setOutputValueById('outPutValue').innerText = inputValue);
-    const availableTarget  = needBalaced - outPutValue;
+    const availableTarget = targetValue -= outPutValue;
     document.getElementById('target').innerText = availableTarget;
     //modal open
     tabToggleToCssRemove('my_modal')
-    }
-   
-   //for history
-    const historyDiv = document.getElementById('historysec')
+    //for history
+    const historyDiv = document.getElementById('historysec');
     const div= document.createElement('div');
     div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
     const timeDate= new Date()
@@ -46,11 +44,9 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
     <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
     `
     historyDiv.appendChild(div);
-
-    // history page to hidden
-    tabToggleToCssAdd('hiddenp');
-
-   
+     // history page to hidden
+     tabToggleToCssAdd('hiddenp');
+    }
 
 })
 
@@ -61,19 +57,17 @@ document.getElementById('donateBtn2').addEventListener('click', function(){
     const inputValue1= getInputValueById('input2');
     //validater  
     if(isNaN(inputValue1) || inputValue1 <= 0 || inputValue1 > targetValue){
-    alert('Write a valid Number');
+    alert('Write a valid Amount');
 
     }
 
     else{
     const outPutValue1 = parseFloat(setOutputValueById('outPutValue1').innerText = inputValue1);
-    const availableTarget  = needBalaced - outPutValue1;
+    const availableTarget  = targetValue -= outPutValue1 ;
     document.getElementById('target').innerText = availableTarget;
     //modal open
-    tabToggleToCssRemove('my_modal')
-    }
-   
-   //for history
+    tabToggleToCssRemove('my_modal');
+    //for history
     const historyDiv = document.getElementById('historysec')
     const div= document.createElement('div');
     div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
@@ -83,10 +77,12 @@ document.getElementById('donateBtn2').addEventListener('click', function(){
     <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
     `
     historyDiv.appendChild(div);
+     // history page to hidden
+     tabToggleToCssAdd('hiddenp');
 
-    // history page to hidden
-    tabToggleToCssAdd('hiddenp');
-
+    }
+   
+   
 
 })
 
@@ -97,32 +93,31 @@ document.getElementById('donateBtn3').addEventListener('click', function(){
     const inputValue2= getInputValueById('input3');
     //validater  
     if(isNaN(inputValue2) || inputValue2 <= 0 || inputValue2 > targetValue){
-    alert('Write a valid Number');
+    alert('Write a valid Amount');
 
     }
 
     else{
     const outPutValue2 = parseFloat(setOutputValueById('outPutValue2').innerText = inputValue2);
-    const availableTarget  = needBalaced - outPutValue2;
+    const availableTarget  = targetValue -= outPutValue2;
     document.getElementById('target').innerText = availableTarget;
     //modal open
-    tabToggleToCssRemove('my_modal')
-    }
-   
-   //for history
-    const historyDiv = document.getElementById('historysec')
-    const div= document.createElement('div');
-    div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
-    const timeDate= new Date()
-    div.innerHTML = `
-    <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue2}  Taka is Donated for Injured in the Quota Movement, Bangladesh</p>
-    <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
-    `
-    historyDiv.appendChild(div);
-
+    tabToggleToCssRemove('my_modal');
+     //for history
+     const historyDiv = document.getElementById('historysec')
+     const div= document.createElement('div');
+     div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
+     const timeDate= new Date()
+     div.innerHTML = `
+     <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue2}  Taka is Donated for Injured in the Quota Movement, Bangladesh</p>
+     <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+     `
+     historyDiv.appendChild(div);
     // history page to hidden
     tabToggleToCssAdd('hiddenp');
-
+ 
+    }
+   
 
 })
 
