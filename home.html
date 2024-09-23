@@ -84,7 +84,7 @@
                         <div class="flex justify-start items-center gap-3 bg-[#1111110D] px-4 py-3 rounded-lg w-48 mb-4">
                           <img src="./assets/coin.png" alt="">
                             <!-- dynamicBalaced -->
-                            <span class="text-xl text-[#111111B3] font-medium">5000</span>
+                            <span id="outPutValue1" class="text-xl text-[#111111B3] font-medium">5000</span>
                           <span class="text-xl text-[#111111B3] font-medium">BDT</span>
                       </div>
                       <h1 c lass="text-xl font-bold ">Donate for Flood Relief in Feni,Bangladesh</h1>
@@ -92,9 +92,9 @@
                           The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                             </p>
                           <!-- inputForDonate -->
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered block w-full mb-4" required />
+                        <input id="input2" type="text" placeholder="Write Donation Amount" class="input input-bordered block w-full mb-4" required />
                       <!-- Dynamic ClickAble Button -->
-                    <button class="btn bg-[#b4f461] w-full text-xl font-medium">Donate Now</button>
+                    <button id="donateBtn2" class="btn bg-[#b4f461] w-full text-xl font-medium">Donate Now</button>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@
                             <!-- inputForDonate -->
                           <input type="text" placeholder="Write Donation Amount" class="input input-bordered block w-full mb-4" required />
                       <!-- Dynamic ClickAble Button -->
-                    <button class="btn bg-[#b4f461] w-full text-xl font-medium">Donate Now</button>
+                    <button id="donateBtn3" class="btn bg-[#b4f461] w-full text-xl font-medium">Donate Now</button>
                   </div>
               </div>
             </div>
@@ -134,7 +134,7 @@
       <!-- modal -->
         <div id="my_modal" class="hidden fixed top-1/2 left-1/2  -translate-y-1/2 -translate-x-1/2">
            <div class="bg-white shadow-2xl text-center px-20 py-8 w-full space-y-4 rounded-xl">
-              <h1 class="text-4xl text-black font-bold capitalize">congrets</h1>
+              <h1 class="text-4xl text-black font-bold capitalize">congrates</h1>
                 <img class="m-auto" src="./assets/coin.png" alt="">
                    <h3 class="text-xl font-bold capitalize  text-slate-500">You have donated for Humankind</h3>
                      <p class="py-4 text-xl font-bold capitalize  text-black">Successfully</p>
@@ -153,7 +153,7 @@
      </section>
 
 
-
+       <script src="utilities.js"></script>
       <script src="script.js"></script>
   </body>
 </html>

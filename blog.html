@@ -9,30 +9,96 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-
-     <!-- header-section -->
+    <!-- header-section -->
      <header class="">  
-        <div class="bg-[#F9F7F3] px-4 md:px-14 xl:px-36 py-7 ">
-          <!-- navVar -->
-          <nav class="flex justify-between container m-auto">
-            <!-- blogPage Button -->
-              <button onclick="windowChangeToHome()" class="btn  hover:bg-slate-200 w-26 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111] border-none">Donation</button>
-              <!-- logo -->
-                <div class="flex justify-center w-1/2 m-auto items-center gap-3">
-                  <img src="./assets/logo.png" alt="">
-                    <span class="text-xl font-semibold text-[#111111]">Donate Bangladesh</span>
-                  </div>
-                <!--TotalBalanced -->
+       <div class="bg-[#F9F7F3] px-4 md:px-14 xl:px-36 py-7 ">
+         <!-- navVar -->
+           <nav class="flex justify-between container m-auto">
+             <!-- blogPage Button -->
+                <button onclick="windowChangeToHome()" class="btn  hover:bg-slate-200 w-26 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111] border-none">Donation</button>
+                  <!-- logo -->
+                    <div class="flex justify-center w-1/2 m-auto items-center gap-3">
+                       <img src="./assets/logo.png" alt="">
+                     <span class="text-xl font-semibold text-[#111111]">Donate Bangladesh</span>
+                   </div>
+                 <!--TotalBalanced -->
                 <div class="flex justify-center items-center gap-3">
                   <img src="./assets/coin.png" alt="">
-                    <!-- DynamicNumber -->
-                    <span id="target" class="text-xl text-[#111111B3] font-medium">5000</span>
+                      <!-- DynamicNumber -->
+                     <span id="target" class="text-xl text-[#111111B3] font-medium">5000</span>
                   <span class="text-xl text-[#111111B3] font-medium">BDT</span>
               </div>
             </nav>
           </div> 
         </header>
-    <h1 class="bg-slate-600 text-gray-100"> hi well come to our blog pages</h1>
+         
+    <!-- section 1-->
+
+        <section class="bg-slate-400 pb-28 pt-20">
+           <div class="container mx-auto flex flex-col justify-center items-center gap-5 px-7 lg:px-24">
+               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border ">
+                 <div class="collapse-title text-xl font-medium text-slate-900"> What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                       <p class="">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each node is an object representing a part of the document. This allows programming languages like JavaScript to interact with and manipulate the document’s structure, style, and content1</p>
+                   </div>
+               </div>
+               <!--  -->
+               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
+                <div class="collapse-title text-xl font-medium text-slate-900">How do you select an element from the DOM?</div>
+                   <div class="collapse-content">
+                     <p class="pb-2">You can select elements from the DOM using various methods provided by the document object. Here are some common   ways:</p>
+                      <li class="pb-8">By ID : <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
+                        document.getElementById('myElementId')
+                     </code></li>
+
+                     <li class="pb-8">By Class Name: <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
+                        document.querySelector('.myClassName'); or document.querySelectorAll('.myClassName')
+                     </code></li>
+
+                     <li class="pb-8">By Tag Name: <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
+                        var element = document.getElementById('myElementId');
+                     </code></li>
+
+                     <li class="pb-8">By CSS Selector: <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
+                        var element = document.getElementById('myElementId');
+                     </code></li>
+                      
+                 </div>
+              </div>
+              <!--  -->
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border">
+                <div class="collapse-title text-xl font-medium text-slate-900">What is event delegation in the context of the DOM, and why is it  useful?</div>
+                   <div class="collapse-content">
+                     <p class="pb-6">tabindex="0" attribute is necessary to make the div focusable</p>
+                 </div>
+              </div>
+              <!--  -->
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border">
+                <div class="collapse-title text-xl font-medium text-slate-900">How do you manipulate an element's attributes and styles using the DOM?</div>
+                  <div class="collapse-content">
+                    <p class="pb-6"> You can manipulate an element’s attributes and styles using various properties and methods:</p>
+                       <li class="pb-6">Attributes: </li>
+                         <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
+                            var element = document.getElementById('myElementId');
+                            element.setAttribute('data-custom', 'value'); // Set attribute
+                            var value = element.getAttribute('data-custom'); // Get attribute
+                            element.removeAttribute('data-custom'); // Remove attribute                            
+                     </code>
+                 </div>
+              </div>
+              <!--  -->
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border">
+                <div class="collapse-title text-xl font-medium text-slate-900">How do you remove an element from the DOM?</div>
+                   <div class="collapse-content">
+                     <p class="pb-6"> You can use the removeChild method to remove an element from the DOM. For example:</p>
+                       <li class="pb-6">By ID : </li>
+                         <code class="bg-red-400 p-4 rounded-xl text-slate-700 ">
+                         var element = document.getElementById('myElementId');
+                    </code>
+                 </div>
+              </div>
+           </div>
+        </section>
 
     <script src="script.js"></script>
 </body>
