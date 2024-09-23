@@ -9,6 +9,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+     <!-- header-section -->
+     <header class="">  
+        <div class="bg-[#F9F7F3] px-4 md:px-14 xl:px-36 py-7 ">
+          <!-- navVar -->
+          <nav class="flex justify-between container m-auto">
+            <!-- blogPage Button -->
+              <button onclick="windowChangeToHome()" class="btn  hover:bg-slate-200 w-26 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111] border-none">Donation</button>
+              <!-- logo -->
+                <div class="flex justify-center w-1/2 m-auto items-center gap-3">
+                  <img src="./assets/logo.png" alt="">
+                    <span class="text-xl font-semibold text-[#111111]">Donate Bangladesh</span>
+                  </div>
+                <!--TotalBalanced -->
+                <div class="flex justify-center items-center gap-3">
+                  <img src="./assets/coin.png" alt="">
+                    <!-- DynamicNumber -->
+                    <span id="target" class="text-xl text-[#111111B3] font-medium">5000</span>
+                  <span class="text-xl text-[#111111B3] font-medium">BDT</span>
+              </div>
+            </nav>
+          </div> 
+        </header>
     <h1 class="bg-slate-600 text-gray-100"> hi well come to our blog pages</h1>
 
     <script src="script.js"></script>

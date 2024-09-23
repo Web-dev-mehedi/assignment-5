@@ -10,18 +10,18 @@
 
 </head>
 <!-- sticky top-2 z-20 -->
-   <body>
+   <body class="bg-[#F9F7F3]">
    <!-- header-section -->
     <header class="">  
       <div class="bg-[#F9F7F3] px-4 md:px-14 xl:px-36 py-7 ">
         <!-- navVar -->
         <nav class="flex justify-between container m-auto">
           <!-- blogPage Button -->
-            <button onclick="windowChange()" class="btn w-24 rounded-lg bg-[#b4f461] text-xl font-medium">Blog</button>
+            <button onclick="windowChangeBlog()" class="btn w-24 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111]">Blog</button>
             <!-- logo -->
               <div class="flex justify-center w-1/2 m-auto items-center gap-3">
                 <img src="./assets/logo.png" alt="">
-                  <span class="text-xl font-semibold">Donate Bangladesh</span>
+                  <span class="text-xl font-semibold text-[#111111]">Donate Bangladesh</span>
                 </div>
               <!--TotalBalanced -->
               <div class="flex justify-center items-center gap-3">
@@ -39,7 +39,7 @@
         </div>  
       </header>
 
-   <main id="mainPage" class="bg-[#F9F7F3] pb-24">
+   <main id="mainPage" class="pb-24">
     <!-- Donate for Flood at Noakhali section  -->
       <section class="px-4 md:px-14 xl:px-36 py-10 bg-white"> 
       <!-- conatiner -->
@@ -134,7 +134,8 @@
     
 
    <!-- histry page -->
-     <section id="historysec" class="border border-red-400 hidden bg-black h-80">
+     <section id="historysec" class="px-4 md:px-14 xl:px-36 pt-12 pb-2 bg-red-50 hidden min-h-screen">
+        <p id="hiddnp" class="text-xl text-[#111] font-semibold text-center mt-28">history is empty</p>
           
      </section>
 

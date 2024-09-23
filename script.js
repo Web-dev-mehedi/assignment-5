@@ -1,3 +1,4 @@
+//total tageted value
 let targetValue = 4000;
 const needBalaced = document.getElementById('target').innerText = targetValue
 
@@ -9,9 +10,9 @@ function getInputValueById(id){
 //function for validation
 function validationForInput(id){
    const inputValue = parseFloat(document.getElementById(id).value);
-
-    
+ 
 }
+
 
 // setOutput fuction
 function setOutputValueById(id){
@@ -69,12 +70,37 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
         return ;
      }
    
-   
-    // validationForInput('input1');
+   //
+    const historyDiv = document.getElementById('historysec')
+    const div= document.createElement('div');
+    div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
+    const timeDate= new Date()
+    div.innerHTML = `
+    <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue}  Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+    <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+    `
+    historyDiv.appendChild(div);
+
+    tabToggleToCssAdd('hiddnp')
+    
+
+
+
+
+
 
 })
 
 // window chinging function
-function windowChange(){
+function windowChangeBlog(){
     window.location.href = "./blog.html";
 }
+function windowChangeToHome(){
+    window.location.href = "./home.html";
+}
+
+// history function
+
+
+
+
