@@ -36,10 +36,15 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
     // inputFunctionCall
     const inputValue= getInputValueById('input1');
     //validater  
-    if(isNaN(inputValue) || inputValue <= 0 || inputValue > targetValue){
-    alert('Write a valid Amount');
-    return 
+    if(isNaN(inputValue) || inputValue <= 0 ){
+        alert('Write a valid Amount');
+        return 
     }
+    
+    if(inputValue > targetValue){
+        alert('If You Want To Donate More Than 50000 BDT Than Contact Us To : 019xxxxxxxX');
+        return 
+        }
 
     else{
         // showing and uPdate total value from card
@@ -55,7 +60,7 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
         const timeDate= new Date();
         div.innerHTML = `
         <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue}  Taka is ${title1} </p>
-        <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        <span class="bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
         `
         historyDiv.appendChild(div);
         // history page to hidden
@@ -72,10 +77,15 @@ document.getElementById('donateBtn2').addEventListener('click', function(){
     // inputFunctionCall
     const inputValue1= getInputValueById('input2');
     //validater  
-    if(isNaN(inputValue1) || inputValue1 <= 0 || inputValue1 > targetValue){
-    alert('Write a valid Amount');
-    return
-    }
+    if(isNaN(inputValue1) || inputValue1 <= 0 ){
+        alert('Write a valid Amount');
+        return
+        }
+    
+    if(inputValue1 > targetValue){
+        alert('If You Want To Donate More Than 50000 BDT Than Contact Us To : 019xxxxxxxX');
+        return 
+        }
 
     else{
         // showing and uPdate total value from card
@@ -91,7 +101,7 @@ document.getElementById('donateBtn2').addEventListener('click', function(){
         const timeDate= new Date();
         div.innerHTML = `
         <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue1}  Taka is ${title2}</p>
-        <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        <span class="bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
         `
         historyDiv.appendChild(div);
         // history page to hidden
@@ -108,10 +118,14 @@ document.getElementById('donateBtn3').addEventListener('click', function(){
     // inputFunctionCall
     const inputValue2= getInputValueById('input3');
     //validater  
-    if(isNaN(inputValue2) || inputValue2 <= 0 || inputValue2 > targetValue){
-    alert('Write a valid Amount');
-    return
-    }
+    if(isNaN(inputValue2) || inputValue2 <= 0){
+        alert('Write a valid Amount');
+        return
+        }
+    if(inputValue2 > targetValue){
+        alert('If You Want To Donate More Than 50000 BDT Than Contact Us To : 019xxxxxxxX');
+        return 
+        }
 
     else{
         // showing and uPdate total value from card
@@ -127,7 +141,7 @@ document.getElementById('donateBtn3').addEventListener('click', function(){
         const timeDate= new Date()
         div.innerHTML = `
         <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue2}  Taka is ${title3}</p>
-        <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        <span class="bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
         `
         historyDiv.appendChild(div);
         // history page to hidden
