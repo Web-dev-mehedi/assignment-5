@@ -60,7 +60,7 @@ document.getElementById('donateBtn1').addEventListener('click', function(){
         const timeDate= new Date();
         div.innerHTML = `
         <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue}  Taka is ${title1} </p>
-        <span class="bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        <span class="leading-10 bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
         `
         historyDiv.appendChild(div);
         // history page to hidden
@@ -101,7 +101,7 @@ document.getElementById('donateBtn2').addEventListener('click', function(){
         const timeDate= new Date();
         div.innerHTML = `
         <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue1}  Taka is ${title2}</p>
-        <span class="bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        <span class="leading-10 bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
         `
         historyDiv.appendChild(div);
         // history page to hidden
@@ -141,7 +141,7 @@ document.getElementById('donateBtn3').addEventListener('click', function(){
         const timeDate= new Date()
         div.innerHTML = `
         <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue2}  Taka is ${title3}</p>
-        <span class="bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        <span class="leading-10 bg-slate-100 px-3 py-2 rounded-md text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
         `
         historyDiv.appendChild(div);
         // history page to hidden
