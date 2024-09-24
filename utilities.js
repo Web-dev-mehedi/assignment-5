@@ -4,7 +4,7 @@ function getInputValueById(id){
     return Number(document.getElementById(id).value)
 }
 
-// get value from card fuction
+// get value from card function
 function setOutputValueById(id){
     return Number(document.getElementById(id).innerText);
 }

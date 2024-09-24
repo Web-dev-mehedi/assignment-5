@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[#F9F7F3]">
     <!-- header-section -->
      <header class="sticky top-0 z-20 ">  
-       <div class="bg-[#F9F7F3] px-4 md:px-14 xl:px-36 py-7 ">
+       <div class="  px-4 md:px-14 xl:px-36 pt-2 pb-5 sm:py-6 backdrop-blur-xl bg-[#F9F7F3]/50">
          <!-- navVar -->
            <nav class="flex flex-row-reverse flex-wrap sm:flex-row justify-between container m-auto relative">
              <!-- blogPage Button -->
-                <button onclick="windowChangeToHome()" class="absolute sm:relative left-0 -bottom-2 sm:bottom-0 btn w-26 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111] border-none">Donation</button>
+                <button onclick="windowChangeToHome()" class="absolute sm:relative left-0 -bottom-2 sm:bottom-0 btn w-26 rounded-lg bg-[#b4f461] text-xl font-medium text-[#111111] border-none hover:bg-slate-200">Donation</button>
                   <!-- logo -->
-                    <div class="flex justify-center w-1/2 m-auto items-center gap-3">
+                    <div class="flex justify-center w-full sm:w-1/2 sm:mx-auto items-center gap-3 pb-5 sm:pb-0">
                        <img src="./assets/logo.png" alt="">
                      <span class="text-xl font-semibold text-[#111111]">Donate Bangladesh</span>
                    </div>
@@ -33,19 +33,27 @@
         </header>
          
     <!-- section 1-->
+         
 
-        <section class="bg-slate-400 pb-28 pt-20">
-           <div class="container mx-auto flex flex-col justify-center items-center gap-5 px-7 lg:px-24">
+        <section class="bg-white pb-28 pt-16 px-6 lg:px-14 min-h-screen ">
+               <div>
+                   <h1 class="text-4xl text-slate-800 font-bold  text-left underline underline-offset-6 mb-12">Important FAQ</h1>
+               </div>
+           <div class="container mx-auto flex flex-col justify-center items-center gap-8 md:relative  ">
+                <div class="md:w-4/12 md:absolute left-0 top-0">
+                  <img src="./assets/Questions.gif" alt="" class="w-full mx-auto min-h-max">
+              </div>
+              <div class=" space-y-5 md:w-8/12 md:absolute top-0 right-0">
             <!-- ques-1 -->
-               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
-                 <div class="collapse-title text-xl font-medium text-slate-900"> What is the Document Object Model (DOM)?</div>
+               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white  border-b-[1px] border-b-slate-200 rounded-none">
+                 <div class="collapse-title text-lg font-medium text-slate-900"> What is the Document Object Model (DOM)?</div>
                     <div class="collapse-content ">
                        <p class=" bg-emerald-50 p-4 rounded-xl text-slate-500">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each node is an object representing a part of the document. This allows programming languages like JavaScript to interact with and manipulate the document’s structure, style, and content12. Essentially, the DOM provides a way for scripts to dynamically access and update the content, structure, and style of a document.</p>
                    </div>
                </div>
                <!-- ques-2 -->
-               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
-                <div class="collapse-title text-xl font-medium text-slate-900">How do you select an element from the DOM?</div>
+               <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border-b-[1px] border-b-slate-200 rounded-none">
+                <div class="collapse-title text-lg font-medium text-slate-900">How do you select an element from the DOM?</div>
                    <div class="collapse-content overflow-auto">
                      <p class="pb-2 text-slate-500">You can select elements from the DOM using various methods provided by the document object. Here are some common   ways:</p>
                       <div class="bg-emerald-50 w-full m-auto text-red-400 p-4 rounded-xl overflow-auto">
@@ -74,8 +82,8 @@
                  </div>
               </div>
               <!-- ques-3 -->
-              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
-                <div class="collapse-title text-xl font-medium text-slate-900">What is event delegation in the context of the DOM, and why is it  useful?</div>
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border-b-[1px] border-b-slate-200 rounded-none">
+                <div class="collapse-title text-lg font-medium text-slate-900">What is event delegation in the context of the DOM, and why is it  useful?</div>
                    <div class="collapse-content overflow-scroll">
                      <p class="pb-2  text-slate-500">Event delegation is a technique in which a single event listener is added to a parent element to manage events for multiple child elements. This is based on the concept of event bubbling, where an event propagates up the DOM tree from the target element to its ancestors34.
 
@@ -91,8 +99,8 @@
                  </div>
               </div>
               <!--ques-4  -->
-              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
-                <div class="collapse-title text-xl font-medium text-slate-900">How do you manipulate an element's attributes and styles using the DOM?</div>
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border-b-[1px] border-b-slate-200 rounded-none">
+                <div class="collapse-title text-lg font-medium text-slate-900">How do you manipulate an element's attributes and styles using the DOM?</div>
                   <div class="collapse-content overflow-x-scroll">
                     <p class="py-2 px-4  text-slate-500"> You can manipulate an element’s attributes and styles using various properties and methods:</p>
                      <div class="bg-emerald-50 w-full m-auto text-red-400 p-4 rounded-xl overflow-x-scroll">
@@ -115,8 +123,8 @@
                  </div>
               </div>
               <!-- ques-5  -->
-              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border p-2">
-                <div class="collapse-title text-xl font-medium text-slate-900">How do you remove an element from the DOM?</div>
+              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-white border-b-[1px] border-b-slate-200 rounded-none">
+                <div class="collapse-title text-lg font-medium text-slate-900">How do you remove an element from the DOM?</div>
                    <div class="collapse-content overflow-auto">
                      <p class="pb-2  text-slate-500"> You can use the removeChild method to remove an element from the DOM. For example:</p>
                        <div class="text-slate-500 overflow-auto bg-emerald-50 p-4 rounded-xl overflow-x-scroll w-full m-auto">
@@ -160,6 +168,7 @@
                    </div>
                  </div>
               </div>
+            </div>
            </div>
         </section>
 
