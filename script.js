@@ -1,3 +1,16 @@
+//total targeted value from navbar 
+let targetValue = document.getElementById('target').innerText;
+
+//total value from cards
+let cardTotalValue1 = setOutputValueById('outPutValue');
+let cardTotalValue2 = setOutputValueById('outPutValue1')
+let cardTotalValue3 = setOutputValueById('outPutValue2');
+
+//history title from card title
+const title1= callInnerTextById('title1');
+const title2= callInnerTextById('title2');
+const title3= callInnerTextById('title3');
+
 
 //tab toggle btn call for donation tab
 document.getElementById('donation').addEventListener('click', function(){
@@ -18,108 +31,113 @@ document.getElementById('donation').addEventListener('click', function(){
 
 
 
-
-// input1 and  validation
+// input1 button 
 document.getElementById('donateBtn1').addEventListener('click', function(){
     // inputFunctionCall
     const inputValue= getInputValueById('input1');
     //validater  
     if(isNaN(inputValue) || inputValue <= 0 || inputValue > targetValue){
     alert('Write a valid Amount');
-    return ;
+    return 
     }
+
     else{
-    const outPutValue = parseFloat(setOutputValueById('outPutValue').innerText = inputValue);
-    const availableTarget = targetValue -= outPutValue;
-    document.getElementById('target').innerText = availableTarget;
-    //modal open
-    tabToggleToCssRemove('my_modal')
-    //for history
-    const historyDiv = document.getElementById('historysec');
-    const div= document.createElement('div');
-    div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
-    const timeDate= new Date()
-    div.innerHTML = `
-    <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue}  Taka is Donated for famine-2024 at Noakhali, Bangladesh</p>
-    <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
-    `
-    historyDiv.appendChild(div);
-     // history page to hidden
-     tabToggleToCssAdd('hiddenp');
-    }
+        // showing and uPdate total value from card
+        document.getElementById('outPutValue').innerText = cardTotalValue1 += inputValue;
+        //showing and update total targeted value in navbar
+        document.getElementById('target').innerText =  targetValue -= inputValue;
+        //modal open
+        tabToggleToCssRemove('my_modal');
+        // for history
+        const historyDiv = document.getElementById('historysec');
+        const div= document.createElement('div');
+        div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8');
+        const timeDate= new Date();
+        div.innerHTML = `
+        <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue}  Taka is ${title1} </p>
+        <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        `
+        historyDiv.appendChild(div);
+        // history page to hidden
+        tabToggleToCssAdd('hiddenp');
+        historyInfo('historysec');
+
+        }
 
 })
 
 
-// input2 and  validation
+// input2 button
 document.getElementById('donateBtn2').addEventListener('click', function(){
     // inputFunctionCall
     const inputValue1= getInputValueById('input2');
     //validater  
     if(isNaN(inputValue1) || inputValue1 <= 0 || inputValue1 > targetValue){
     alert('Write a valid Amount');
-
+    return
     }
 
     else{
-    const outPutValue1 = parseFloat(setOutputValueById('outPutValue1').innerText = inputValue1);
-    const availableTarget  = targetValue -= outPutValue1 ;
-    document.getElementById('target').innerText = availableTarget;
-    //modal open
-    tabToggleToCssRemove('my_modal');
-    //for history
-    const historyDiv = document.getElementById('historysec')
-    const div= document.createElement('div');
-    div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
-    const timeDate= new Date()
-    div.innerHTML = `
-    <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue1}  Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-    <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
-    `
-    historyDiv.appendChild(div);
-     // history page to hidden
-     tabToggleToCssAdd('hiddenp');
+        // showing and uPdate total value from card
+        document.getElementById('outPutValue1').innerText = cardTotalValue2 += inputValue1;
+        //showing and update total targeted value in navbar
+        document.getElementById('target').innerText =  targetValue -= inputValue1;
+        //modal open
+        tabToggleToCssRemove('my_modal');
+        //for history
+        const historyDiv = document.getElementById('historysec')
+        const div= document.createElement('div');
+        div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8');
+        const timeDate= new Date();
+        div.innerHTML = `
+        <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue1}  Taka is ${title2}</p>
+        <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        `
+        historyDiv.appendChild(div);
+        // history page to hidden
+        tabToggleToCssAdd('hiddenp');
+        historyInfo('historysec');
 
-    }
-   
-   
-
+        }
+        
 })
 
 
-// input3 and  validation
+// input3 button
 document.getElementById('donateBtn3').addEventListener('click', function(){
     // inputFunctionCall
     const inputValue2= getInputValueById('input3');
     //validater  
     if(isNaN(inputValue2) || inputValue2 <= 0 || inputValue2 > targetValue){
     alert('Write a valid Amount');
-
+    return
     }
 
     else{
-    const outPutValue2 = parseFloat(setOutputValueById('outPutValue2').innerText = inputValue2);
-    const availableTarget  = targetValue -= outPutValue2;
-    document.getElementById('target').innerText = availableTarget;
-    //modal open
-    tabToggleToCssRemove('my_modal');
-     //for history
-     const historyDiv = document.getElementById('historysec')
-     const div= document.createElement('div');
-     div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
-     const timeDate= new Date()
-     div.innerHTML = `
-     <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue2}  Taka is Donated for Injured in the Quota Movement, Bangladesh</p>
-     <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
-     `
-     historyDiv.appendChild(div);
-    // history page to hidden
-    tabToggleToCssAdd('hiddenp');
- 
-    }
-   
+        // showing and uPdate total value from card
+        document.getElementById('outPutValue2').innerText = cardTotalValue3 += inputValue2;
+        //showing and update total targeted value in navbar
+        document.getElementById('target').innerText =  targetValue -= inputValue2;
+        //modal open
+        tabToggleToCssRemove('my_modal');
+        //for history
+        const historyDiv = document.getElementById('historysec');
+        const div= document.createElement('div');
+        div.classList.add('bg-white','border', 'border-[#1111111A]' ,'p-8','rounded-xl','mb-8')
+        const timeDate= new Date()
+        div.innerHTML = `
+        <p class="text-xl font-bold text-[#111111]  capitalize mb-4"> ${inputValue2}  Taka is ${title3}</p>
+        <span class="text-base font-light text-[#111111B3] capitalize"> ${timeDate}</span> 
+        `
+        historyDiv.appendChild(div);
+        // history page to hidden
+        tabToggleToCssAdd('hiddenp');
+        historyInfo('historysec');
+
+        }
 
 })
+
 
 
     // modal closed
@@ -129,13 +147,7 @@ document.getElementById('donateBtn3').addEventListener('click', function(){
     clearInOnClosingModel('input1');
     clearInOnClosingModel('input2');
     clearInOnClosingModel('input3');
-    clearOutOnClosingModel('outPutValue');
-    clearOutOnClosingModel('outPutValue1');
-    clearOutOnClosingModel('outPutValue2');
-       
     })
-
-
 
     // window chinging function
     function windowChangeBlog(){
@@ -144,9 +156,5 @@ document.getElementById('donateBtn3').addEventListener('click', function(){
     function windowChangeToHome(){
     window.location.href = "./home.html";
     }
-
-// history function
-
-
 
 
